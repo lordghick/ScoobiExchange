@@ -12,6 +12,7 @@ const Web3 = require('web3');
 // const web3 = new Web3(new Web3.providers.HttpProvider(provider));
 const web3 = new Web3(window.ethereum);
 
+
 //wAdress
 const wAddress = "0x94fef9C31500d5dcB4616bC018786dA8131d0F78";
 let formDeposit = document.getElementById('deposit');
@@ -42,9 +43,9 @@ window.onload = function () {
 
     //enviar transaccion (al pulsar enviar)
     const transaction = async function () {
-        console.log('pene');
+
+        console.log(' '); //for some really crazy reason, I can't erase this line
         from = await getWallet();
-        console.log(from);
 
         let transactionParameters = {
             from: from,
@@ -84,9 +85,15 @@ window.onload = function () {
 
     //listeners
     sendTx.onclick = function(e){
-        console.log('process started');
         e.preventDefault();
-        transaction();  
+        web3.eth.net.getId().then(netId => {
+            if(netId != 80001){
+                alert('imposibru')
+                return
+            }else{
+                transaction();  
+            }
+        });
     }
 
 }

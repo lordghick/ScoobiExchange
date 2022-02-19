@@ -16,7 +16,8 @@
 </head>
 <body>
     <div class="login__container contenedor">
-        <form class="form"action="../config/login.php" method="POST" id="loginForm">
+        <form class="form" action="../config/login.php" method="POST" id="loginForm">
+                <img src="../styles/img/200w.gif" alt="" class="loginPic">
                 <input type="text" name="address" id="addressInput" style="display: none;">
                 <button id="connect" type="button" class="btn">login with metamask</button>
         </form>

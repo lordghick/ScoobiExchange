@@ -1,0 +1,124 @@
+:root {
+  --colorPrimario: #00204a;
+  --colorSecunadario: #00bbf0;
+  --colorTerciario: #e33e5a;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris: #e1e1e1;
+  --gradientePrimario: #e6e6e6;
+  --gradienteSecundario: #bbbbbb;
+  --bg-color: rgb(34, 34, 34);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  margin: 2rem 0;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4.6rem;
+}
+h3 {
+  font-size: 3rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input {
+  outline: 0;
+}
+
+p {
+  margin: 0;
+}
+/* Globales */
+
+.contenedor {
+  max-width: 120rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* UsernameCreator */
+
+.waiting__container {
+  background-color: var(--blanco);
+  width: 100%;
+  height: 50rem;
+  padding: 5rem;
+  margin-top: 10rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40rem;
+}
+
+.btn {
+  background-color: var(--colorSecunadario);
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  padding: 1.5rem;
+  text-align: center;
+  border: none;
+  width: 80%;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  font-size: 2rem;
+}
+
+.submit-btn{
+  width: 20rem;
+}
+
+.parrafo {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  transition: color 300ms ease;
+}
+
+.parrafo:hover{
+    color: var(--colorTerciario);
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid var(--colorPrimario);
+  height: 3rem;
+  width: 60%;
+  font-size: 2rem;
+}

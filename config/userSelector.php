@@ -14,8 +14,6 @@ $_SESSION['newUsername'] = $_POST['username'];
 $_SESSION['captcha'] = RepositorioUsuario :: selectUsername(Conexion :: obtenerConexion(), $_SESSION['newUsername']);
 }
 
-echo $_SESSION['captcha'];
-
 
 if(isset($_POST['auth'])){
     if($_SESSION['captcha'] == $_POST['auth']){

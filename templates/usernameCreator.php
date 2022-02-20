@@ -15,9 +15,22 @@
     <link rel="stylesheet" href="../styles/usernameCreator.css" />
 </head>
 <body>
+    <div id="modal-container" class="modal-container">
+        <div id="modal-content" class="modal-content">
+                <div class="modal-p">
+                    For this process you have to be logged into our server and wait on our hub!
+                    Do you want to continue?
+                </div>
+                
+                <div class="modal-btns">
+                    <button id="button-modal-close" class="btn modal-btn">Maybe later</button>
+                    <button id="button-modal" class="btn modal-btn">Continue</button>
+                </div>
+        </div>
+    </div>
     <div class="contenedor contenedor__usernameCreator">
         <div class="contenedor__formularios">
-            <form class="form" method="POST" action="../config/userSelector.php">
+            <form id="form-user-creator" class="form" method="POST" action="../config/userSelector.php">
 
                 <div class="parrafo_form">
                 <p class="parrafo">Insert your ingame username. This username must match your ingame username or you wont be able to deposit or withdraw!
@@ -25,12 +38,13 @@
                 </div>
     
                 <input type="text" name="username">Your ingame username
-                <button type="submit" name="usernameCreator" class="btn submit-btn">Submit!</button>
+                <button id="button-user-creator" type="submit" name="usernameCreator" class="btn submit-btn">Submit!</button>
             </form>
             <form class="form" method="POST" action="../config/logout.php">
                 <button type="submit" name="usernameCreator" class="btn logOut-btn">logOut</button>
             </form>
         </div>
     </div>
+    <script src="../src/modal.js"></script>
 </body>
 </html>

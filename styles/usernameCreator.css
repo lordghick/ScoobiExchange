@@ -145,3 +145,59 @@ input {
   font-size: 2rem;
 }
 
+/* For the modal */
+
+.modal-container{
+  position: absolute;
+ width: 100vw;
+ height: 100vh;
+background-color: rgba(0, 0, 0, 0.411);
+transition: 1s ease all;
+visibility: hidden;
+opacity: 0;
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.modal-content{
+  background-color: rgb(34, 34, 34);
+  margin: 10rem auto;
+  border-radius: 5%;
+  position: relative;
+  top: -100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease all;
+  z-index: 2;
+  width: 40rem;
+  height: 40rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.modal-p{
+  width: 50%;
+  height: 10rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  transition: color 300ms ease;
+}
+
+.modal-btns{
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 5rem;
+}
+
+.modal-btn{
+ padding: 0;
+ line-height: 1;
+ width: 40%;
+}

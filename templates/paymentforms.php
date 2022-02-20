@@ -49,7 +49,7 @@
         <form class="formulario" action="">
           <div id="response"></div>
           <div class="btn__contenedor">
-            <button id="sendTransaction" class="btn">
+            <button id="withdrawTransaction" class="btn">
               Withdraw your Minecraft Scoobi!
             </button>
           </div>

@@ -43,10 +43,10 @@ if ($usuario == "") {
     }
 }
 
-if($amount = 0){
+if($amount == 0){
     echo "No balance to withdraw";
 }else{
-    echo $amount;
+    echo intval($amount);
 }
 
 Conexion :: cerrarConexion();

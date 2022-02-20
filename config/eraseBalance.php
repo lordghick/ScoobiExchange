@@ -8,6 +8,7 @@ $conexion = Conexion::obtenerConexion();
 
 $usuario = "";
 
+//this function should be a class for optimization
 if (isset($conexion)) {
     try {
         $sql = "SELECT * FROM users WHERE wallet = :wallet";

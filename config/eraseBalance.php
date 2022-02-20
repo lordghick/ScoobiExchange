@@ -25,14 +25,19 @@ if (isset($conexion)) {
     }
 }
 
+echo "This is the user echo " . $usuario;
+
 try {
     $sql = "UPDATE xconomy set balance=0 WHERE player = :player";
     $sentencia = $conexion->prepare($sql);
     $sentencia->bindParam(':player', $usuario, PDO::PARAM_STR);
-    if ($sentencia->execute()) {
+    $result = $sentencia->execute();
+    if ($result) {
         echo "1";
+        echo "This is the correct echo " . $result;
     }else{
         echo "0";
+        echo "This is the wrong echo " .  $result;
     }
 } catch (PDOException $ex) {
     echo $ex;

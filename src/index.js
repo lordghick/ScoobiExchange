@@ -141,12 +141,10 @@ window.onload = async function () {
         
                 web3.eth.sendSignedTransaction(rawTransaction).on('receipt', 
                 async function(){
+
                 
                     let formulario = new FormData();
-                    let walletFrom = document.createElement("input");
-                    walletFrom.name = "wallet";
-                    walletFrom.value = from;
-                    console.log(formulario);
+                    formulario.append("wallet", from);
                 
                     fetch('../config/eraseBalance.php', {
                         method: 'POST',

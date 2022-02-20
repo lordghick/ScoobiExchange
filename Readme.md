@@ -24,8 +24,7 @@ How to implement on webpage:
 
 To Do:
 
-1. add css to the project
-2. Several unhandled exceptions are listed through code comments, exceptions that will be fixed in the incomming days
+1. Several unhandled exceptions are listed through code comments, exceptions that will be fixed in the incomming days
 
 PS:
 

@@ -108,7 +108,7 @@ class RepositorioUsuario{
                     $secretPass = rand(100000, 999999);
 
                     {
-                        $rcon->sendCommand('say ' . $usuario . ' ' . $secretPass);
+                        $rcon->sendCommand('msg ' . $usuario . ' ' . $secretPass);
                     }
                 
                 

@@ -18,7 +18,7 @@
     <div class="wrong__container contenedor">
         <form class="form"action="../config/userSelector.php" method="POST">
             <label class="parrafo" for="Auth">We've sent you a captcha to your ingame character, check your chat!</label>
-            <input type="text" name="auth" placeholder="Wrong Captcha, try again!">
+            <input type="text" name="auth" placeholder="Wrong Captcha, try again!" required>
             <label for="username">Inserted username:</label>
             <input type="text" name="username" value="<?php echo $_SESSION['newUsername'] ?>" readonly>
             <button type="submit" class="btn submit-btn">Submit</button>

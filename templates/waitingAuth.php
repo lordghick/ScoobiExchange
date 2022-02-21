@@ -16,13 +16,14 @@
 </head>
 <body>
     <div class="waiting__container contenedor">
-        <form action="../config/userSelector.php" method="POST"class="form">
+        <form id="authForm" action="../config/userSelector.php" method="POST"class="form">
             <label class="parrafo" for="Auth">We've sent you a captcha to your ingame character, check your chat!</label>
-            <input type="text" name="auth" placeholder="Waiting for code">
+            <input id="authCaptcha" type="text" name="auth" placeholder="Waiting for code" required>
             <label for="username">Inserted username:</label>
             <input type="text" name="username" value="<?php echo $_SESSION['newUsername'] ?>" readonly>
-            <button type="submit" class="btn submit-btn">Submit</button>
+            <button id="authBtn" type="submit" class="btn submit-btn">Submit</button>
         </form>
     </div>
+    <script src="../src/auth.js"></script>
 </body>
 </html>

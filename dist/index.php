@@ -4,9 +4,7 @@ include_once '../config/redireccion.inc.php';
 include_once '../config/user.repository.php';
 include_once '../config/user.inc.php';
 include_once '../config/connection.inc.php';
-?>
 
-<?php
     if(ControlSesion::sesionIniciada()){
         Conexion :: abrirConexion();
         $usernameValue = RepositorioUsuario::usernameExists(Conexion ::obtenerConexion(), $_SESSION['address']);

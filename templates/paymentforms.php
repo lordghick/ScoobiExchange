@@ -41,7 +41,7 @@
           >
         </form>
 
-        <form class="formulario" action="">
+        <form class="formulario">
           <div id="response"></div>
           <div class="btn__contenedor">
             <button id="withdrawTransaction" class="btn">

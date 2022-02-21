@@ -37,7 +37,7 @@
                 </p>
                 </div>
     
-                <input type="text" name="username">Your ingame username
+                <input id="newUserInput" type="text" name="username" required>Your ingame username
                 <button id="button-user-creator" type="submit" name="usernameCreator" class="btn submit-btn">Submit!</button>
             </form>
             <form class="form" method="POST" action="../config/logout.php">

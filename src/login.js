@@ -33,6 +33,11 @@ const formObject = document.getElementById('loginForm');
 
 connectButton.onclick = async function(){
     let address = await connect();
-    addressInput.value = address;
-    formObject.submit();
+    if(address){
+        addressInput.value = address;
+        formObject.submit();
+    }else{
+        alert('You need to unlock your Metamask!')
+    }
+
 };

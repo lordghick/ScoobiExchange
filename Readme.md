@@ -25,6 +25,8 @@ How to implement on webpage:
 To Do:
 
 1. Several unhandled exceptions are listed through code comments, exceptions that will be fixed in the incomming days
+2. Private key needs to go to a database
+3. Connection params to the minecraft hub should come from a database
 
 PS:
 

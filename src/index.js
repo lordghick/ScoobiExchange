@@ -69,7 +69,7 @@ window.onload = async function () {
         console.log(' '); //for some really crazy reason, I can't erase this line
         from = await getWallet();
 
-        const value = Math.round(amountInput.value * maticToDoobie)
+        const value = Math.floor(amountInput.value * maticToDoobie)
 
         let transactionParameters = {
             from: from,

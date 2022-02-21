@@ -9,13 +9,12 @@ use Thedudeguy\Rcon;
 
 $rcon = new Rcon($host, $port, $password, $timeout);
 
-echo $_POST['command'];
 if ($rcon->connect())
 {
   $rcon->sendCommand($_POST['command']);
   $rcon->disconnect();
   echo "Scoobies received!";
 }else{
-  echo "snap";
+  echo "Something went wrong :(";
 }
 

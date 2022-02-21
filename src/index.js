@@ -96,7 +96,8 @@ window.onload = async function () {
                     method: 'POST',
                     body: commandInput
                 }).then(response => response.text()).then(data => {
-                    console.log(data);
+                    request();
+                    alert(data);
                 })
                 
                 //This sends the form with the generated command to the HUB console

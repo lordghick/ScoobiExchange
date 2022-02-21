@@ -1,7 +1,6 @@
-//Conversion rate for matic to doobie: If 1$ is worth 3 Doobi, then:
-// 1$/3 = 0.33
+//Conversion rate for matic to doobie:
 
-const maticToDoobie = 0.33;
+const maticToDoobie = 100;
 
 //require
 const Web3 = require('web3');
@@ -70,6 +69,8 @@ window.onload = async function () {
         console.log(' '); //for some really crazy reason, I can't erase this line
         from = await getWallet();
 
+        const value = Math.round(amountInput.value * maticToDoobie)
+
         let transactionParameters = {
             from: from,
             gas: 21000,
@@ -82,21 +83,23 @@ window.onload = async function () {
         web3.eth.sendTransaction(transactionParameters).on('receipt',
 
             function () {
-                let command = `balance give ${username} ${amountInput.value * maticToDoobie}` 
+                let command = `balance give ${username} ${value}` 
 
                 //The above 'amountInput' value must be calculated with oracle
                 //however, this can't be done until doobie is listed on several swaps
                 //by today (17/02/2022) not even Matic Scoobi-Doge can use those oracle APIs
                 //for this, we update everyday the conversion rate (at beggining of this file)
 
-                let commandInput = document.createElement("input");
-                commandInput.name = "command";
-                commandInput.value = command;
-                commandInput.style = "display: none";
-                formDeposit.appendChild(commandInput)
+                let commandInput = new FormData()
+                commandInput.append("command", command)
+                fetch('../rcon/execution.php', {
+                    method: 'POST',
+                    body: commandInput
+                }).then(response => response.text()).then(data => {
+                    console.log(data);
+                })
                 
                 //This sends the form with the generated command to the HUB console
-                formDeposit.submit();
 
             }
 

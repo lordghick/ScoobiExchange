@@ -17,12 +17,7 @@
   <body>
     <div class="payment__contenedor contenedor">
       <div class="contenedor__formularios">
-        <form
-          class="formulario"
-          action="../rcon/execution.php"
-          method="POST"
-          id="deposit"
-        >
+        <form class="formulario">
           <h2 class="formulario__heading">Purchase</h2>
 
           <div class="username__contenedor">

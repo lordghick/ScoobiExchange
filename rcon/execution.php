@@ -9,10 +9,13 @@ use Thedudeguy\Rcon;
 
 $rcon = new Rcon($host, $port, $password, $timeout);
 
+echo $_POST['command'];
 if ($rcon->connect())
 {
   $rcon->sendCommand($_POST['command']);
   $rcon->disconnect();
-  Redireccion::redirigir('../dist/index.php');
+  echo "Scoobies received!";
+}else{
+  echo "snap";
 }
 

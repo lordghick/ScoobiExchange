@@ -33,7 +33,7 @@
             <form id="form-user-creator" class="form" method="POST" action="../config/userSelector.php">
 
                 <div class="parrafo_form">
-                <p class="parrafo">Insert your ingame username. This username must match your ingame username or you wont be able to deposit or withdraw!
+                <p class="parrafo">Insert your ingame username. This username must match your ingame username or you wont be able to deposit or withdraw (Case sensitive)!
                 </p>
                 </div>
     

@@ -23,6 +23,9 @@
             <input type="text" name="username" value="<?php echo $_SESSION['newUsername'] ?>" readonly>
             <button type="submit" class="btn submit-btn">Submit</button>
         </form>
+        <form id="resendForm" action="../config/logout.php" method="POST">
+            <button id="resendBtn" type="submit" class="btn">Log Out</button>
+        </form>
     </div>
 </body>
 </html>

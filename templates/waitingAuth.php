@@ -24,7 +24,7 @@
             <button id="authBtn" type="submit" class="btn submit-btn">Submit</button>
         </form>
         <form id="resendForm" action="../config/logout.php" method="POST">
-            <button id="resendBtn" type="submit" class="btn submit-btn">Log Out</button>
+            <button id="resendBtn" type="submit" class="btn submit-btn">Weren't you at the hub? Try again!</button>
         </form>
     </div>
 </body>

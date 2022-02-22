@@ -19,7 +19,8 @@
         <div id="modal-content" class="modal-content">
                 <div class="modal-p">
                     For this process you have to be logged into our server and wait on our hub!
-                    Do you want to continue?
+                    Click on continue when you are there!
+                    
                 </div>
                 
                 <div class="modal-btns">

@@ -5,6 +5,7 @@ let closeModalBtn = document.getElementById("button-modal-close");
 let modalContainer  = document.getElementById("modal-container");
 let modalContent  = document.getElementById('modal-content')
 let modalText  = document.getElementById('modal-text')
+let newUserInput = document.getElementById('newUserInput');
 
 function modalCall(){
 
@@ -34,7 +35,12 @@ btnForm.onclick = function (e){
 
 modalBtn.onclick = function (e){
     e.preventDefault();
-    formUser.submit();
+    if(newUserInput.value == ""){
+        newUserInput.placeholder = "This field can't be empty!"
+        modalClose();
+    }else{
+        formUser.submit();
+    }
 }
 
 closeModalBtn.onclick = function (e){

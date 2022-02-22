@@ -15,17 +15,16 @@
     <link rel="stylesheet" href="../styles/wrongAuth.css" />
 </head>
 <body>
-    <div class="wrong__container contenedor">
+    <div class="wrong__container contenedor" id="formContainers">
         <form class="form"action="../config/userSelector.php" method="POST">
             <label class="parrafo" for="Auth">We've sent you a captcha to your ingame character, check your chat!</label>
             <input type="text" name="auth" placeholder="Wrong Captcha, try again!" required>
             <label for="username">Inserted username:</label>
             <input type="text" name="username" value="<?php echo $_SESSION['newUsername'] ?>" readonly>
             <button type="submit" class="btn submit-btn">Submit</button>
-        </form>
-        <form id="resendForm" action="../config/logout.php" method="POST">
-            <button id="resendBtn" type="submit" class="btn">Log Out</button>
+            <button id="resendBtn" type="button" class="btn submit-btn">Weren't you at the hub? Try again!</button>
         </form>
     </div>
+    <script src="../src/auth.js"></script>
 </body>
 </html>

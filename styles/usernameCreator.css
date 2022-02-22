@@ -118,6 +118,17 @@ p {
   font-size: 2rem;
 }
 
+@media (min-width: 768px) {
+  .btn {
+    width: 20rem;
+  }
+}
+
+.btn:hover {
+  background-color: var(--colorPrimario);
+  transform: scale(0.7);
+}
+
 .submit-btn{
     width: 20rem;
 }

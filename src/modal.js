@@ -6,6 +6,7 @@ let modalContainer  = document.getElementById("modal-container");
 let modalContent  = document.getElementById('modal-content')
 let modalText  = document.getElementById('modal-text')
 let newUserInput = document.getElementById('newUserInput');
+let logoutBtn = document.getElementById('logout-username-creator');
 
 function modalCall(){
 

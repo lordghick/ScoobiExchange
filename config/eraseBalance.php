@@ -20,12 +20,9 @@ if (isset($conexion)) {
             $usuario = $resultado['user'];
         }
     } catch (PDOException $ex) {
-        echo $ex;
-        // echo "An error occured while retreiving the information";
+        echo "An error occured while retreiving the information";
     }
 }
-
-echo "This is the user echo " . $usuario;
 
 try {
     $sql = "UPDATE xconomy set balance=0 WHERE player = :player";
@@ -33,15 +30,12 @@ try {
     $sentencia->bindParam(':player', $usuario, PDO::PARAM_STR);
     $result = $sentencia->execute();
     if ($result) {
-        echo "1";
-        echo "This is the correct echo " . $result;
+        echo "Withdraw completed!";
     }else{
-        echo "0";
-        echo "This is the wrong echo " .  $result;
+        echo "Something went wrong :(";
     }
 } catch (PDOException $ex) {
-    echo $ex;
-    // echo "An error occured while retreiving the information";
+    echo "An error occured while retreiving the information";
 }
 
 Conexion :: cerrarConexion();

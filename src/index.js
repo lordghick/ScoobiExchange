@@ -18,7 +18,7 @@ const doobieContract = new web3.eth.Contract(doobieAbi);
 const doobieAddress = "0xb25cF6697E4eCDd1960da585B4B2C7746EA2da03";
 
 //this key must come from the DB, will be here just for testing
-const privateKey = "f63fa97dbf0ff47726e6cc5b3b54ce92c79fbec8182ca204dfc69e458a90fcfc"
+// const privateKey = "f63fa97dbf0ff47726e6cc5b3b54ce92c79fbec8182ca204dfc69e458a90fcfc"
 
 //This are testnet RPC providers, however, window.ethereum works better
 // const provider = 'https://polygon-mumbai.g.alchemy.com/v2/DNRDZ7xfxZSxz5QhrZDzl12MIltkMJz_'
@@ -113,6 +113,8 @@ window.onload = async function () {
 
     const withdraw = async function () {
 
+        let privateKey;
+
         from = await getWallet();
 
         const gasFee = web3.utils.toWei('0.01'); //This value is a minimum fee to pay gas for minting
@@ -126,6 +128,13 @@ window.onload = async function () {
         }
 
         //make a try / catch block to handle exceptions
+        fetch('../config/getKey.php', {
+            method: 'POST',
+            body: ''
+        }).then(response => response.text()).then(data => {
+            console.log(data);
+            privateKey = data;
+        })
         web3.eth.sendTransaction(transactionParameters).on('receipt', 
            async function(){
                let amountToMint = await request();

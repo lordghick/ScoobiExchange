@@ -33,7 +33,7 @@
 
           <div class="btn__contenedor">
             <button id="sendTransaction" class="btn">
-              Buy Minecraft Doobie!
+              Buy Minecraft Doobie
             </button>
           </div>
           <a href="../config/logout.php" class="help__link"
@@ -45,7 +45,7 @@
           <div id="response"></div>
           <div class="btn__contenedor">
             <button id="withdrawTransaction" class="btn">
-              Withdraw your Minecraft Scoobi!
+              Withdraw your Minecraft Doobies
             </button>
           </div>
         </form>
@@ -62,7 +62,7 @@
         <form action="../rcon/execution.php" method="POST" id="deposit">    
             <input type="text" id="username" readonly>
             <div><input type="number" id="amount" placeholder="Matic to transfer"></div>
-            <div><button id="sendTransaction">Buy Minecraft Doobie!</button></div>
+            <div><button id="sendTransaction">Buy Minecraft Doobies</button></div>
         </form>
     </div>
 </body>

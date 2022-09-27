@@ -27,6 +27,6 @@ To Do:
 1. Several unhandled exceptions are listed through code comments, exceptions that will be fixed in the incomming days
 2. Private key needs to go to a database
 
-PS:
+Update 09/27/2022:
 
-package-lock.json, package.json and webpack.config.js are only needed for development and will be removed once the full API is done
+As the project stopped, the database or connection to server config won't work anymore. Anyhow this code remains as a "base" for a crypto exchange using php, web3.js and solidity for a Minecraft server (or any other game)
